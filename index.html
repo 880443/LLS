@@ -18,10 +18,23 @@ http://lls.sou.tw:66
 <!-- <a href="https://time.is/Baoding" id="time_is_link" rel="nofollow" style="font-size:36px">保定市时间:</a>
 <span id="Baoding_z43d" style="font-size:36px"></span>-->
 <br>
-<iframe height=500px style="border:none;width:100%;" scrolling=”no” src="https://time.is/zh/Shunping_County"></iframe>
+<iframe id="13" height=500px style="border:none;width:100%;" scrolling=”no” src="https://time.is/zh/Shunping_County" onload="load()"></iframe>
 
 </body>
-
+ 
+// 在它加载完成后，执行下面的方法
+function load() {
+    console.log('loaded')
+    activateTheme("light");
+}
+ 
+// 这里我们封装了一个activateTheme方法，方便后边复用，作用是修改iframe内部的主题颜色
+function activateTheme(theme) {
+    var iframe = document.getElementById("i3");
+    if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage(theme, "*");
+    }
+}
 <script src="//widget.time.is/t.js"></script>
 <script>
 time_is_widget.init({Baoding_z43d:{}});
