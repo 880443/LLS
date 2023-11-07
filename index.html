@@ -21,21 +21,7 @@ http://lls.sou.tw:66
 <iframe id="13" height=500px style="border:none;width:100%;" scrolling=”no” src="https://time.is/zh/Shunping_County" onload="load()"></iframe>
 
 </body>
-<script>
-// 在它加载完成后，执行下面的方法
-function load() {
-    console.log('loaded')
-    activateTheme("light");
-}
- 
-// 这里我们封装了一个activateTheme方法，方便后边复用，作用是修改iframe内部的主题颜色
-function activateTheme(theme) {
-    var iframe = document.getElementById("i3");
-    if (iframe && iframe.contentWindow) {
-        iframe.contentWindow.postMessage(theme, "*");
-    }
-}
-</script>
+
 <script src="//widget.time.is/t.js"></script>
 <script>
 time_is_widget.init({Baoding_z43d:{}});
