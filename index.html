@@ -1,55 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<meta name=”viewport” content=”width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no″>
 <title>Time.is</title>
 <!-- 以下方式定时转到其他页面 -->
 <meta http-equiv="refresh" content="2;url=
 http://27.189.129.109:66/index.html
 ">
-<p style="font-size:50px;">ooo正在跳转...</p> 
-<style>
-	.icon-nav.tr{display:none!important;}
-</style>
+<p style="font-size:10px;">正在跳转...</p> 
 </head>
-<body>
-
-<!-- <a href="https://time.is/Baoding" id="time_is_link" rel="nofollow" style="font-size:36px">保定市时间:</a>
-<span id="Baoding_z43d" style="font-size:36px"></span>
-<br>-->
-
-<iframe id="13" height=460px style="border:none;width:100%;" scrolling="no" frameborder="no" src="https://time.is/zh/Shunping_County" style="overflow: hidden;pointer-events:none;position:fixed;"></iframe>
-
-</body>
-
-<script src="//widget.time.is/t.js"></script>
-<script>
-time_is_widget.init({Baoding_z43d:{}});
-</script>
-
-<script>
-					window.onload = function () {
-					    // 阻止双击放大
-					    var lastTouchEnd = 0;
-					    document.addEventListener('touchstart', function (event) {
-					      if (event.touches.length > 1) {
-					        event.preventDefault();
-					      }
-					    });
-					    document.addEventListener('touchend', function (event) {
-					      var now = (new Date()).getTime();
-					      if (now - lastTouchEnd <= 300) {
-					        event.preventDefault();
-					      }
-					      lastTouchEnd = now;
-					    }, false);
-					
-					    // 阻止双指放大
-					    document.addEventListener('gesturestart', function (event) {
-					      event.preventDefault();
-					    });
-					  }
-				</script>
-
-</html>
